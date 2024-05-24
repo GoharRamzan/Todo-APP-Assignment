@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(50,50,116,1) 41%, rgba(178,242,255,1) 100%)
+}
+
+
+.App {
+  text-align: center;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #64b5f6, #1976d2); /* Gradient background with blue shades */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  width: calc(100% - 140px);
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+  color: #333; /* Dark text color for input */
+}
+
+input[type="text"]:hover {
+  transform: translateY(-2px);
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:first-of-type {
+  background-color: #ff8f00; /* Orange color for Add button */
+  color: white;
+}
+
+button.delete-all {
+  background-color: #d32f2f; /* Red color for Delete All button */
+  color: white;
+}
+
+button.edit-button {
+  background-color: #1976d2; /* Blue color for Edit button */
+  color: white;
+}
+
+button.delete-button {
+  background-color: #b71c1c; /* Dark red color for Delete button */
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  background: #ffffff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.list-item:hover {
+  transform: translateY(-2px);
+}
+
+.button-group {
+  display: flex;
+  gap: 5px;
+}
+
+li button {
+  margin-left: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .App {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .input-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
